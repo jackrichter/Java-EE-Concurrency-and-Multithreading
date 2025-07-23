@@ -22,6 +22,7 @@ public class ReportsProcessor implements Callable<Boolean> {
 
     @Override
     public Boolean call() throws Exception {
+        System.out.println(Thread.currentThread().getName() + ": generating report.");
         boolean reportGenerated = false;
         List<BankAccountTransaction> transactions = dao.getAllTransactionsForAccounts(account);
 
