@@ -11,7 +11,8 @@ import java.util.concurrent.TimeUnit;
 @Path("urlCheck")
 public class UrlHealthResource {
 
-    @Resource(lookup = "java:comp/DefaultManagedScheduledExecutorService")
+//    @Resource(lookup = "java:comp/DefaultManagedScheduledExecutorService")
+    @Resource(lookup = "java:jboss/ee/concurrency/scheduler/default")
     private ManagedScheduledExecutorService scheduledExecutorService;
 
     @GET
